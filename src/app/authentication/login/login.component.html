@@ -1,6 +1,9 @@
-<form class="" [formGroup]="loginForm">
-  <input class="form-control" type="text" formControlName="username" placeholder="Username"/>
-  <input class="form-control" type="password" formControlName="password" placeholder="Password"/>
-</form>
-
-{{ loginForm.status | json }}
+<div class="borded">
+  <div class="container">
+    <form class="" [formGroup]="loginForm">
+      <input class="form-control" type="text" formControlName="username" placeholder="Username"/>
+      <input class="form-control" type="password" formControlName="password" placeholder="Password"/>
+      <button class="btn btn-primary form-control" type="button" name="button" (click)="submitForm()" [disabled]="loginForm.status !== 'VALID'">Login</button>
+    </form>
+  </div>
+</div>
