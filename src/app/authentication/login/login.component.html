@@ -1,0 +1,6 @@
+<form class="" [formGroup]="loginForm">
+  <input class="form-control" type="text" formControlName="username" placeholder="Username"/>
+  <input class="form-control" type="password" formControlName="password" placeholder="Password"/>
+</form>
+
+{{ loginForm.status | json }}
